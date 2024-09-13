@@ -40,10 +40,8 @@ header h1 {
 
 /* Button for showing form */
 #home-button{
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  padding: 10px 20px;
+
+  padding: 5px 15px;
   background-color: #007bff;
   color: white;
   border: none;
@@ -51,21 +49,19 @@ header h1 {
   cursor: pointer;
 }
 #show-form-button {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  padding: 10px 20px;
+  padding: 5px 15px; 
   background-color: #007bff;
   color: white;
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  
 }
 
-#home-button :hover {
+#home-button:hover {
   background-color: #0056b3;
 }
-#show-form-button {
+#show-form-button:hover {
   background-color: #0056b3;
 }
 
