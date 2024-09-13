@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Abdullah - Resume</title>
+  <link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+  <section id="static-resume">
+    <section id="header">
+      <img src="asset/images/profile-pic.png" alt="Profile Picture" class="profile-pic">
+      <h1 id="resume-name"></h1>
+      <p class="slogan">Turning Ideas into Reality – Reach Out Today!</p>
+      <button id="home-button" onclick="location.href='index.html';">Home</button>
+    </section>
+
+    <section id="personal-info">
+      <h2>Personal Information</h2>
+      <p><strong>Name:</strong> <span id="resume-name-info"></span></p>
+      <p><strong>Email:</strong> <span id="resume-email"></span></p>
+      <p><strong>Age:</strong> <span id="resume-age"></span></p>
+      <p><strong>City:</strong> <span id="resume-city"></span></p>
+    </section>
+
+    <section id="education">
+      <h2>Education</h2>
+      <p><strong>Institute:</strong> <span id="resume-institute"></span></p>
+      <p><strong>Degree:</strong> <span id="resume-degree"></span></p>
+      <p><strong>Duration:</strong> <span id="resume-duration"></span></p>
+    </section>
+
+    <section id="skills">
+      <h2>Skills</h2>
+      <button id="toggleSkills">Show Skills</button>
+      <div class="skills-content">
+      <ul id="resume-skills"class="uppercase-text"></ul>
+      </div>
+    </section>
+
+    <section id="work-experience">
+      <h2>Work Experience</h2>
+      <p id="resume-experience"></p>
+    </section>
+    <section id="resume-actions">
+      <p id="resume-url"></p>
+      <button id="share-button">Share Resume</button>
+      <button id="download-button">Download as PDF</button>
+    </section>    
+  </section>
+  <script src="/dist/resume.js" defer></script><!-- Ensure this script is loaded after the DOM is ready -->
+  <script src="/dist/script.js"></script>
+  <script src="/dist/test.js"></script>
+</body>
+</html>

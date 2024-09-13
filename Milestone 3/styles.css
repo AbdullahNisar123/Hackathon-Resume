@@ -116,6 +116,9 @@ section {
 .skills-content {
   display: none;
 }
+.uppercase-text  {
+  text-transform: capitalize;
+}
 
 /* Add styles for the form */
 #form-section {
@@ -173,6 +176,7 @@ button:hover {
   margin: 0px;
   border: 1px solid #000000;
   background-image: url(/asset/images/abstract-uv-ultraviolet-light-composition-bg.jpg);
+  background-size: contain;
 
   
 }
