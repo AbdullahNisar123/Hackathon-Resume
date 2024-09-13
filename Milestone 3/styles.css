@@ -3,14 +3,17 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
+  background-color: #000;
 }
 
-header {
+#header {
   text-align: center;
   padding: 20px;
   background: url('asset/images/background.jpeg') no-repeat center center;
   background-size: cover;
   position: relative;
+  border: 1px solid #ffffff;
+
 }
 
 .profile-pic {
@@ -20,7 +23,7 @@ header {
   z-index: 1;
 }
 
-header h1 {
+#header h1 {
   margin: 10px 0;
   color: white;
 }
@@ -37,13 +40,14 @@ header h1 {
   color: #ffdd57; /* Change color on hover */
   transform: scale(1.05); /* Slightly enlarge the text on hover */
 }
-
+#personal-info,#education,#skills,#work-experience,#header{
+  background-color: white;
+  border-radius: 10px;
+}
 /* Button for showing form */
 #home-button{
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  padding: 10px 20px;
+
+  padding: 5px 15px;
   background-color: #007bff;
   color: white;
   border: none;
@@ -51,21 +55,19 @@ header h1 {
   cursor: pointer;
 }
 #show-form-button {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  padding: 10px 20px;
+  padding: 5px 15px; 
   background-color: #007bff;
   color: white;
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  
 }
 
-#home-button :hover {
+#home-button:hover {
   background-color: #0056b3;
 }
-#show-form-button {
+#show-form-button:hover {
   background-color: #0056b3;
 }
 
@@ -169,7 +171,7 @@ button:hover {
 #static-resume {
   padding: 20px;
   margin: 10px;
-  border: 1px solid #ffffff;
+  border: 1px solid #000000;
   
 }
 .profile-pic {
