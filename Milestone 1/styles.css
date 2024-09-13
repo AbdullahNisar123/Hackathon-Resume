@@ -3,14 +3,16 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
+  background-color: #000;
 }
 
-header {
+#header {
   text-align: center;
   padding: 20px;
   background: url('asset/images/background.jpeg') no-repeat center center;
   background-size: cover;
   position: relative;
+  border: 1px solid #ffffff;
 }
 
 .profile-pic {
@@ -20,7 +22,7 @@ header {
   z-index: 1;
 }
 
-header h1 {
+#header h1 {
   margin: 10px 0;
   color: white;
 }
@@ -38,12 +40,14 @@ header h1 {
   transform: scale(1.05); /* Slightly enlarge the text on hover */
 }
 
+#personal-info, #education, #skills, #work-experience, #header {
+  background-color: white;
+  border-radius: 10px;
+}
+
 /* Button for showing form */
-#show-form-button {
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  padding: 10px 20px;
+#home-button {
+  padding: 5px 15px;
   background-color: #007bff;
   color: white;
   border: none;
@@ -51,44 +55,36 @@ header h1 {
   cursor: pointer;
 }
 
+#show-form-button {
+  padding: 5px 15px; 
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#home-button:hover {
+  background-color: #0056b3;
+}
+
 #show-form-button:hover {
   background-color: #0056b3;
 }
 
-/* Modal styles */
-.modal {
-  display: none; /* Hidden by default */
-  position: fixed;
-  z-index: 1;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  background-color: rgb(0,0,0);
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-}
-
-.modal-content {
-  background-color: #fefefe;
-  margin: 15% auto;
-  padding: 20px;
-  border: 1px solid #888;
-  width: 80%; /* Could be more or less, depending on screen size */
-}
-
-.close {
-  color: #aaa;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-  color: black;
-  text-decoration: none;
+button {
+  padding: 8px 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
   cursor: pointer;
+  font-size: 12px;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #0056b3;
 }
 
 section {
@@ -101,63 +97,99 @@ section {
   display: none;
 }
 
-/* Add styles for the form */
-#form-section {
-  padding: 20px;
+/* Base Styles */
+.skills-content ul li img {
+  height: 50px;
+  width: 50px;
+  list-style: none;
+  margin-right: 20px; /* Adjusted for consistency */
+}
+
+.skills-content ul li {
+  display: inline-block;
+  text-align: center;
+}
+
+.skills-content ul {
+  padding-left: 0;
+  text-align: center;
+}
+
+#skills ul {
+  list-style: none;
+  padding: 0;
+}
+
+#skills ul li {
+  position: relative;
   margin: 10px;
-  border: 1px solid #ddd;
+  text-align: left;
+  padding-right: 60px;
 }
 
-form {
-  display: flex;
-  flex-direction: column;
+#skills ul li img {
+  transition: transform 0.3s ease;
+  padding-right: 0;
+  aspect-ratio: 1/1;
+  object-fit: contain;
 }
 
-fieldset {
-  margin-bottom: 10px;
+.skill-text {
+  opacity: 0;
+  position: absolute;
+  left: 60px;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: opacity 0.3s ease, left 0.3s ease;
+  white-space: nowrap;
+  font-weight: 700;
 }
 
-label {
-  margin-top: 5px;
+#skills ul li:hover .skill-text {
+  opacity: 1;
+  left: 70px;
 }
 
-input, textarea {
-  margin-top: 5px;
-  padding: 8px;
+#skills ul li:hover img {
+  transform: scale(1.1);
 }
 
-button {
-  margin-top: 10px;
-  padding: 10px;
-  background-color: #007bff;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .skills-content ul {
+    padding-left: 20px;
+    text-align: left;
+  }
 
-button:hover {
-  background-color: #0056b3;
-}
+  .skills-content ul li {
+    display: block;
+    text-align: left;
+    margin-right: 0;
+  }
 
-#dynamic-resume {
-  padding: 20px;
-  margin: 10px;
-  border: 1px solid #ddd;
-}
+  .skills-content ul li img {
+    margin-right: 10px;
+    width: 40px;
+    height: 40px;
+    position: relative;
+  }
 
-@media (max-width: 600px) {
-  section {
-    margin: 5px;
-    padding: 10px;
+  .skill-text {
+    left: 70px; /* Adjusted for smaller screens */
+  }
+
+  #skills ul li:hover .skill-text {
+    left: 60px; /* Adjusted for hover on smaller screens */
   }
 }
+
+
 #static-resume {
-  padding: 20px;
-  margin: 10px;
-  border: 1px solid #ffffff;
-  
+  margin: 0px;
+  border: 1px solid #000000;
+  background-image: url(/asset/images/abstract-uv-ultraviolet-light-composition-bg.jpg);
 }
+
 .profile-pic {
   width: 150px;
   border-radius: 50%;
@@ -168,61 +200,19 @@ h1 {
   margin: 10px 0;
   color: black;
 }
-.modal-content h2{
+
+.modal-content h2 {
   text-align: center;
+  color: #ffffff;
 }
-#personal-info , #education ,#skills, #work-experience{
+
+#personal-info, #education, #skills, #work-experience {
   border: 2px solid rgb(0, 0, 0);
 }
-.skills-content ul li img {
-  height: 50px;
-  width: 50px;
-  list-style: none;
-  margin-right: 50px;
-}
 
-.skills-content ul li {
-  display: inline-block;
-}
-
-.skills-content ul {
-  padding-left: 200px;
-}
-#skills ul {
-  list-style: none;
-
-}
-
-#skills ul li {
-  position: relative;
-  display: inline-block;
-  margin: 10px;
-  text-align: center;
-}
-
-#skills ul li img {
-  transition: transform 0.3s ease;
-  padding-right: 100px;
-  aspect-ratio: 3/2;
-  object-fit: contain;
-  mix-blend-mode: color-burn;
-}
-
-.skill-text {
-  opacity: 0;
-  position: absolute;
-  left: 60px; /* Adjust this value based on your desired distance */
-  top: 50%;
-  transform: translateY(-50%);
-  transition: opacity 0.3s ease, left 0.3s ease;
-  white-space: nowrap;
-}
-
-#skills ul li:hover .skill-text {
-  opacity: 1;
-  left: 70px; /* Adjust this value based on your desired hover distance */
-}
-
-#skills ul li:hover img {
-  transform: scale(1.1);
+@media (max-width: 600px) {
+  section {
+    margin: 5px;
+    padding: 10px;
+  }
 }

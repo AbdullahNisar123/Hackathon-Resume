@@ -3,17 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Your Name - Resume</title>
+  <title>Abdullah - Resume</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <section id="static-resume">
-  <header>
+  <section id="header">
     <img src="asset/images/profile-pic.png" alt="Profile Picture" class="profile-pic">
     <h1>Abdullah Nisar</h1>
     <p  class="slogan">Turning Ideas into Reality – Reach Out Today!</p>
-    <!-- <button id="show-form-button">Generate Resume</button> -->
-  </header>
+    <button style="display: none;" id="home-button" onclick="location.reload();">Home</button>
+  </section>
 
 <section id="personal-info">
   <h2>Personal Information</h2>
@@ -33,34 +33,35 @@
     <h2>Skills</h2>
     <button id="toggleSkills">Show Skills</button>
     <div class="skills-content">
-        <ul>
-            <li>
-                <img src="/asset/images/html.png" alt="HTML">
-                <span class="skill-text">HTML</span>
-            </li>
-            <li>
-                <img src="/asset/images/css.png" alt="CSS">
-                <span class="skill-text">CSS</span>
-            </li>
-            <li>
-                <img src="./asset/images/javascript.png" alt="javascript">
-                <span class="skill-text">JavaScript</span>
-            </li>
-            <li>
-                <img src="/asset/images/typescript.png" alt="TypeScript">
-                <span class="skill-text">TypeScript</span>
-            </li>
-            <li>
-                <img src="/asset/images/nextjs.png" alt="Next.js">
-                <span class="skill-text">Next.js</span>
-            </li>
-            <li>
-                <img src="/asset/images/Adobe_Photoshop.png" alt="Adobe Photoshop">
-                <span class="skill-text">Adobe Photoshop</span>
-            </li>
-        </ul>
+      <ul>
+        <li>
+          <img src="/asset/images/html.png" alt="HTML">
+          <span class="skill-text">HTML</span>
+        </li>
+        <li>
+          <img src="/asset/images/css.png" alt="CSS">
+          <span class="skill-text">CSS</span>
+        </li>
+        <li>
+          <img src="./asset/images/javascript.png" alt="JavaScript">
+          <span class="skill-text">JavaScript</span>
+        </li>
+        <li>
+          <img src="/asset/images/typescript.png" alt="TypeScript">
+          <span class="skill-text">TypeScript</span>
+        </li>
+        <li>
+          <img src="/asset/images/nextjs.png" alt="Next.js">
+          <span class="skill-text">Next.js</span>
+        </li>
+        <li>
+          <img src="/asset/images/Adobe_Photoshop.png" alt="Adobe Photoshop">
+          <span class="skill-text">Adobe Photoshop</span>
+        </li>
+      </ul>
     </div>
-</section>
+  </section>
+  
 
   
   <section id="work-experience">
@@ -71,53 +72,8 @@
   <script src="dist/script.js"></script>
 </section>
 
-  <!-- Modal for Form -->
-  <div id="form-modal" class="modal">
-    <div class="modal-content">
-      <span class="close">&times;</span>
-      <h2>Fill Out Your Resume</h2>
-      <form id="resume-form">
-        <fieldset>
-          <legend>Personal Information</legend>
-          <label for="first-name">First Name:</label>
-          <input type="text" id="first-name" name="first-name" required>
-          
-          <label for="last-name">Last Name:</label>
-          <input type="text" id="last-name" name="last-name" required>
-          
-          <label for="email">Email:</label>
-          <input type="email" id="email" name="email" required>
-          
-          <label for="age">Age:</label>
-          <input type="number" id="age" name="age" required>
-          
-          <label for="city">City:</label>
-          <input type="text" id="city" name="city" required>
-        </fieldset>
-        
-        <fieldset>
-          <legend>Education</legend>
-          <label for="education">Education Details:</label>
-          <textarea id="education" name="education" required></textarea>
-        </fieldset>
-        
-        <fieldset>
-          <legend>Work Experience</legend>
-          <label for="work-experience">Work Experience:</label>
-          <textarea id="work-experience" name="work-experience" required></textarea>
-        </fieldset>
-        
-        <fieldset>
-          <legend>Skills</legend>
-          <label for="skills">Skills (comma separated):</label>
-          <input type="text" id="skills" name="skills" required>
-        </fieldset>
-        
-        <button type="submit">Generate Resume</button>
-      </form>
-      
-    </div>
-  </div>
+
+  
 
 </body>
 </html>

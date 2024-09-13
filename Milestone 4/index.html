@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Name - Resume</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <section id="static-resume">
+  <section id="header">
+    <img src="asset/images/profile-pic.png" alt="Profile Picture" class="profile-pic">
+    <h1>Abdullah Nisar</h1>
+    <p  class="slogan">Turning Ideas into Reality – Reach Out Today!</p>
+    <button id="show-form-button">Generate Resume</button>
+    <button style="display: none;" id="home-button" onclick="location.reload();">Home</button>
+  </section>
+
+<section id="personal-info">
+  <h2>Personal Information</h2>
+  <p><strong>Name:</strong> Abdullah</p>
+  <p><strong>Email:</strong>malikabdullahq976@gamil.com</p>
+  <p><strong>Age:</strong>18</p>
+  <p><strong>City:</strong>Karachi</p>
+</section>
+  
+  <section id="education">  
+    <h2>Education</h2>
+    <p>Higher Secondary School</p>
+    <p>Government College, 2024 - Present</p>
+  </section>
+  
+  <section id="skills">
+    <h2>Skills</h2>
+    <button id="toggleSkills">Show Skills</button>
+    <div class="skills-content">
+        <ul>
+            <li>
+                <img src="/asset/images/html.png" alt="HTML">
+                <span class="skill-text">HTML</span>
+            </li>
+            <li>
+                <img src="/asset/images/css.png" alt="CSS">
+                <span class="skill-text">CSS</span>
+            </li>
+            <li>
+                <img src="./asset/images/javascript.png" alt="javascript">
+                <span class="skill-text">JavaScript</span>
+            </li>
+            <li>
+                <img src="/asset/images/typescript.png" alt="TypeScript">
+                <span class="skill-text">TypeScript</span>
+            </li>
+            <li>
+                <img src="/asset/images/nextjs.png" alt="Next.js">
+                <span class="skill-text">Next.js</span>
+            </li>
+            <li>
+                <img src="/asset/images/Adobe_Photoshop.png" alt="Adobe Photoshop">
+                <span class="skill-text">Adobe Photoshop</span>
+            </li>
+        </ul>
+    </div>
+</section>
+
+  
+  <section id="work-experience">
+    <h2>Work Experience</h2>
+    <p>Freelance Developer & Graphic Designer</p>
+    <p>Worked on various projects including web development and graphic design. Developed dynamic websites and designed engaging visuals for clients.</p>
+  </section>
+  <script src="dist/script.js"></script>
+</section>
+
+  <!-- Modal for Form -->
+  <div id="form-modal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Fill Out Your Resume</h2>
+      <form id="resume-form">
+        <fieldset class="form-dev">
+          <legend>Personal Information</legend>
+          <div class="form-group form-group-inline">
+            <div class="form-group-inline-item">
+              <label for="first-name">First Name:</label>
+              <input type="text" id="first-name" name="first-name" required>
+            </div>
+            <div class="form-group-inline-item">
+              <label for="last-name">Last Name:</label>
+              <input type="text" id="last-name" name="last-name" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+          <div class="form-group form-group-inline">
+            <div class="form-group-inline-item">
+              <label for="age">Age:</label>
+              <input type="number" id="age" name="age" required>
+            </div>
+            <div class="form-group-inline-item">
+              <label for="city">City:</label>
+              <input type="text" id="city" name="city" required>
+            </div>
+          </div>
+        </fieldset>
+        
+        <fieldset class="form-dev">
+          <legend>Education</legend>
+          <div class="form-group form-group-inline">
+            <div class="form-group-inline-item">
+              <label for="institute-name">Institute Name:</label>
+              <input type="text" id="institute-name" name="institute-name" required>
+            </div>
+            <div class="form-group-inline-item">
+              <label for="degree-name">Degree Name:</label>
+              <input type="text" id="degree-name" name="degree-name" required>
+            </div>
+          </div>
+          <div class="form-group form-group-inline">
+            <div class="form-group-inline-item">
+              <label for="start-date">Starting Date:</label>
+              <input type="date" id="start-date" name="start-date" required>
+            </div>
+            <div class="form-group-inline-item">
+              <label for="end-date">Ending Date:</label>
+              <input type="date" id="end-date" name="end-date" required>
+            </div>
+          </div>
+        </fieldset>
+        
+        <fieldset class="form-dev">
+          <legend>Skills</legend>
+          <div class="form-group">
+            <label for="skills">Skills (comma separated):</label>
+            <input type="text" id="skills" class="form-skills" name="skills" required>
+          </div>
+        </fieldset>
+        
+        <fieldset class="form-dev">
+          <legend>Work Experience</legend>
+          <div class="form-group">
+            <label for="work-experience">Work Experience:</label>
+            <textarea id="work-experience" class="form-experience" name="work-experience" rows="4" required></textarea>
+          </div>
+        </fieldset>
+        <button type="submit">Generate Resume</button>        
+      </form>
+    </div>
+  </div>
+  
+
+</body>
+</html>
