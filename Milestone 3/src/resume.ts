@@ -23,7 +23,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const resumeDuration = document.getElementById('resume-duration') as HTMLSpanElement;
   const resumeExperience = document.getElementById('resume-experience') as HTMLParagraphElement;
   const resumeSkills = document.getElementById('resume-skills') as HTMLUListElement;
-  const nameValue = resumeSkills.value.toUpperCase(); // Convert input value to uppercase
   // Set content
   if (firstName && lastName) {
     const fullName = `${firstName} ${lastName}`;
