@@ -5,52 +5,64 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Abdullah - Resume</title>
   <link rel="stylesheet" href="styles.css">
-
 </head>
 <body>
   <section id="static-resume">
+    <!-- Header Section -->
     <section id="header">
       <img src="asset/images/profile-pic.png" alt="Profile Picture" class="profile-pic">
-      <h1 id="resume-name"></h1>
+      <h1 id="resume-name">Abdullah</h1>
       <p class="slogan">Turning Ideas into Reality – Reach Out Today!</p>
       <button id="home-button" onclick="location.href='index.html';">Home</button>
     </section>
 
+    <!-- Personal Information Section -->
     <section id="personal-info">
       <h2>Personal Information</h2>
-      <p><strong>Name:</strong> <span id="resume-name-info"></span></p>
-      <p><strong>Email:</strong> <span id="resume-email"></span></p>
-      <p><strong>Age:</strong> <span id="resume-age"></span></p>
-      <p><strong>City:</strong> <span id="resume-city"></span></p>
+      <p><strong>Name:</strong> <span id="resume-name-info">Abdullah</span></p>
+      <p><strong>Email:</strong> <span id="resume-email">abdullah@example.com</span></p>
+      <p><strong>Age:</strong> <span id="resume-age">30</span></p>
+      <p><strong>City:</strong> <span id="resume-city">Lahore</span></p>
     </section>
 
+    <!-- Education Section -->
     <section id="education">
       <h2>Education</h2>
-      <p><strong>Institute:</strong> <span id="resume-institute"></span></p>
-      <p><strong>Degree:</strong> <span id="resume-degree"></span></p>
-      <p><strong>Duration:</strong> <span id="resume-duration"></span></p>
+      <p><strong>Institute:</strong> <span id="resume-institute">XYZ University</span></p>
+      <p><strong>Degree:</strong> <span id="resume-degree">Bachelor's in Computer Science</span></p>
+      <p><strong>Duration:</strong> <span id="resume-duration">2012 - 2016</span></p>
     </section>
 
+    <!-- Skills Section -->
     <section id="skills">
       <h2>Skills</h2>
-      <button id="toggleSkills">Show Skills</button>
+      <div class="msg">
+        <button id="toggleSkills">Show Skills</button>
+        <h2 id="message" class="hidden"></h2>
+      </div>
       <div class="skills-content">
-      <ul id="resume-skills"class="uppercase-text"></ul>
+        <ul id="resume-skills" class="uppercase-text">
+          <!-- Skills will be listed here -->
+        </ul>
       </div>
     </section>
 
+    <!-- Work Experience Section -->
     <section id="work-experience">
       <h2>Work Experience</h2>
-      <p id="resume-experience"></p>
+      <p id="resume-experience">Details of work experience will be listed here.</p>
     </section>
+
+    <!-- Resume Actions Section -->
     <section id="resume-actions">
       <p id="resume-url"></p>
       <button id="share-button">Share Resume</button>
       <button id="download-button">Download as PDF</button>
     </section>    
   </section>
-  <script src="/dist/resume.js" defer></script><!-- Ensure this script is loaded after the DOM is ready -->
+
+  <!-- JavaScript files -->
+  <script src="/dist/resume.js"></script>
   <script src="/dist/script.js"></script>
-  <script src="/dist/test.js"></script>
 </body>
 </html>

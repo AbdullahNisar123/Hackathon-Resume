@@ -78,7 +78,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     };
-    makeEditable(resumeName, 'first-name'); // Assuming full name is split into first and last names in localStorage
+    makeEditable(resumeName, 'first-name'); // Full name is not editable here
     makeEditable(resumeNameInfo, 'first-name');
     makeEditable(resumeEmail, 'email');
     makeEditable(resumeAge, 'age');
@@ -107,6 +107,20 @@ document.addEventListener('DOMContentLoaded', () => {
                 .catch(err => {
                 console.error('Failed to copy URL: ', err);
             });
+        }
+    });
+    // Handle PDF download
+    const downloadPdfButton = document.getElementById('download-button');
+    const skillsContent = document.querySelector('.skills-content');
+    const message = document.getElementById('message');
+    downloadPdfButton.addEventListener('click', () => {
+        if (skillsContent && skillsContent.style.display === 'none') {
+            message.textContent = 'Please click on "Show Skills" to display your skills before downloading the resume.';
+            message.classList.remove('hidden');
+        }
+        else {
+            message.classList.add('hidden');
+            window.print(); // Opens the print dialog and allows saving as PDF
         }
     });
 });

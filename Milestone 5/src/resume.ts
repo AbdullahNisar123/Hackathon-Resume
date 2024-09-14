@@ -111,4 +111,25 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
   });
+
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+  const downloadPdfButton = document.getElementById('download-button') as HTMLButtonElement;
+  const skillsContent = document.querySelector('.skills-content') as HTMLElement;
+  const message = document.getElementById('message') as HTMLDivElement;
+
+  // Handle PDF download
+  downloadPdfButton.addEventListener('click', () => {
+    if (skillsContent && skillsContent.style.display === 'none') {
+      // Skills section is hidden
+      message.textContent = 'Please click on "Show Skills" to display your skills before downloading the resume.';
+      message.classList.remove('hidden');
+    } else {
+      // Skills section is visible
+      message.classList.add('hidden');
+      window.print(); // This will open the print dialog and allow the user to save as PDF
+    }
+  });
+
 });
